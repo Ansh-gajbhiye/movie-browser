@@ -1,0 +1,30 @@
+.genre-movie-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .genre-title {
+    color: #f5c518;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .loading, .error, .no-movies {
+    text-align: center;
+    padding: 50px;
+    color: white;
+  }
+  
+  .no-movies h2 {
+    color: #f5c518;
+    margin-bottom: 10px;
+  }

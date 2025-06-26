@@ -1,0 +1,216 @@
+/* ————————————————————
+   Menu Toggle Button
+   ———————————————————— */
+   .nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+  }
+  
+  .nav-btn .menu-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    margin-right: 8px;
+    margin-left:-120px;
+  }
+  
+  .nav-btn span {
+    color: white;
+    font-size: 1rem;
+    user-select: none;
+  }
+  
+  .nav-btn:hover .menu-icon,
+  .nav-btn:hover span {
+    fill: #f5c518;  /* IMDb yellow */
+    color: #f5c518;
+  }
+  
+  
+  /* ————————————————————
+     Full‑Screen Overlay
+     ———————————————————— */
+  .menu-overlay {
+    position: fixed;
+    inset: 0;               /* top:0; right:0; bottom:0; left:0; */  
+    background: rgba(15, 15, 15, 0.98);
+    z-index:    9999;       /* sits on top of everything */
+    overflow-y: auto;
+    padding:    20px;
+    animation:  fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  
+  /* ————————————————————
+     Overlay Header & Close Button
+     ———————————————————— */
+  .menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .close-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .close-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+  
+  
+  /* ————————————————————
+     Menu Content Grid
+     ———————————————————— */
+  .menu-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .menu-section {
+    margin-bottom: 30px;
+  }
+  
+  .menu-section h3 {
+    color: #f5c518;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-section li {
+    color: white;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .menu-section li:hover {
+    color: #f5c518;
+  }
+  
+  
+  /* ————————————————————
+     Responsive
+     ———————————————————— */
+  @media (max-width: 768px) {
+    .menu-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Menu.css */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.menu-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  color: white;
+}
+
+.menu-section {
+  margin-bottom: 20px;
+}
+
+.menu-section h3 {
+  color: #f5c518;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-section li {
+  margin-bottom: 10px;
+}
+
+.menu-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+  padding: 5px 0;
+}
+
+.menu-section a:hover {
+  color: #f5c518;
+}
+
+.active-genre {
+  color: #f5c518 !important;
+  font-weight: bold;
+}
+
+.genre-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .genre-list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}

@@ -1,0 +1,88 @@
+/* Language Selector Styles */
+.language-selector {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .language-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .language-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dropdown-icon {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    transition: transform 0.2s ease;
+  }
+  
+  .dropdown-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  .language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1e1e1e;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    z-index: 100;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  
+  .language-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s ease;
+  }
+  
+  .language-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .language-option.selected {
+    background: rgba(100, 108, 255, 0.2);
+  }
+  
+  .language-code {
+    font-weight: bold;
+    min-width: 30px;
+  }
+  
+  .language-name {
+    opacity: 0.8;
+    margin-left: 16px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .language-dropdown {
+    animation: fadeIn 0.2s ease-out;
+  }

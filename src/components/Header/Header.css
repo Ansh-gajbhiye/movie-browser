@@ -1,0 +1,242 @@
+/* Main header container */
+.app-header {
+  background-color:rgb(28, 27, 27);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  height:60px
+}
+
+/* Left section - Logo and Genre */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+}
+
+/* Middle section - Menu and Search */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 2;
+  justify-content: center;
+}
+
+.search-container {
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Right section - Action buttons 
+/*.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+}*/
+/* Right section - Action buttons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+  /* Remove these problematic properties */
+  /* position: relative; */
+  /* order: 3; */
+}
+
+/* Remove this class completely as it's causing issues */
+/* .favorites-btn {
+  order: -1;
+  margin-right: 0px;
+} */
+
+/* Button styles */
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Make sure all buttons have equal spacing */
+.nav-btn + .nav-btn {
+  margin-left: 0.5rem;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  
+  .search-container {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  /* Stack buttons vertically on mobile */
+  .navbar-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ff4d4f, #ffa502);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+  transform: scale(1.05);
+}
+
+.logo-text span {
+  font-weight: 700;
+  color: inherit;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+} 
+
+/* Add this to your CSS */
+.airecommend {
+  background: linear-gradient(90deg, #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff);
+  background-size: 400% 400%;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: gradientFlow 8s ease infinite;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-right: 1rem;
+}
+
+.airecommend:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.airecommend:active {
+  transform: translateY(0);
+}
+
+.airecommend::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  z-index: -1;
+  border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.airecommend:hover::before {
+  opacity: 1;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Ensure other buttons maintain their style */
+.nav-btn, .favorite-btn {
+  /* Your existing button styles */
+  background: transparent; /* Maintain transparent background */
+  animation: none; /* No animation on other buttons */
+}
