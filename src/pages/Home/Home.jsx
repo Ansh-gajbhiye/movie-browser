@@ -59,7 +59,7 @@ function Home() {
 
         <div className="footer-bottom">
         <p>© {new Date().getFullYear()} MovieBrowser. All rights reserved.</p>
-        <p>Designed and developed by the MovieBrowser Team.</p>
+        <p>Designed and developed by the Ansh.</p>
         </div>
       </footer>
     </div>
