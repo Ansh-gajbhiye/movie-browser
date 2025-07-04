@@ -9,7 +9,7 @@ A sleek movie discovery app powered by TMDB API. Browse trending films, search b
 
 👉 **Live Demo:** [(https://movie-browser-jtjdk2b89-ansh-s-projects-54e1ec7d.vercel.app/)]
 
-![App Screenshot](https://raw.githubusercontent.com/Ansh-gajbhiye/movie-browser/main/movie-browser.png)
+![App Screenshot](https://raw.githubusercontent.com/Ansh-gajbhiye/movie-browser/main/public/movie-brower.png)
 
 ## ✨ Features
 
