@@ -1,4 +1,4 @@
-# 🎬 Movie Browser
+#  Movie Browser
 
 [![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB)](https://react.dev/)
@@ -7,11 +7,11 @@
 
 A sleek movie discovery app powered by TMDB API. Browse trending films, search by title, explore genres, and get AI-powered recommendations.
 
-👉 **Live Demo:** [(https://movie-browser-jtjdk2b89-ansh-s-projects-54e1ec7d.vercel.app/)]
+ **Live Demo:** [(https://movie-browser-jtjdk2b89-ansh-s-projects-54e1ec7d.vercel.app/)]
 
 ![Movie Browser Screenshot](https://raw.githubusercontent.com/Ansh-gajbhiye/movie-browser/main/public/movie-browser.png)
 
-## ✨ Features
+##  Features
 
 - **Trending/Popular Movies**: Real-time updated lists
 - **Genre Exploration**: Filter movies by 20+ genres
@@ -20,7 +20,7 @@ A sleek movie discovery app powered by TMDB API. Browse trending films, search b
 - **Responsive Design**: Mobile-first, cross-device experience
 - **Interactive UI**: Smooth animations and intuitive navigation
 
-## 🚀 Installation
+##  Installation
 
 1. Clone the repository:
    ```bash
